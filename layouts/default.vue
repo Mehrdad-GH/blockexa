@@ -1,9 +1,13 @@
 <template>
-  <div>
+  <div class="px-28">
+    <Header />
     <slot />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+</script>
 
-<style></style>
+<style>
+
+</style>

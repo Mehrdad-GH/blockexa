@@ -90,3 +90,8 @@
     font-family: IRANYekanX;
     font-weight: 500;
 }
+body{
+	direction: rtl;
+	background-color: #2C1F4A;
+	color: white;
+}

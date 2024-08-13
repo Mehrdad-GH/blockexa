@@ -1,11 +1,7 @@
 <template>
-  <h1 class="text-5xl ">سلام</h1>
+  <div></div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>
