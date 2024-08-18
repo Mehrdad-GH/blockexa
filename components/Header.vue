@@ -10,7 +10,7 @@
       <NuxtImg sizes="120" src="/Logo.png" />
       <h2 class="text-3xl font-black">بلاک اگزا</h2>
     </div>
-
+    
     <!-- navbar -->
     <ui class="flex list-none gap-7">
       <li v-for="item in menu" :key="item.id">
