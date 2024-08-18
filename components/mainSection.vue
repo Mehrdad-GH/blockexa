@@ -41,7 +41,7 @@
     </div>
 
     <!-- Company Slider  -->
-    <fieldset class="border py-12 mt-4 border-stone-400 rounded-xl">
+    <fieldset class="border py-8 mt-4 border-stone-400 rounded-xl">
       <!-- section title -->
       <legend class="text-left ml-10 px-4 text-lg">شرکت های بلاکچینی</legend>
       <!-- Slider section -->
@@ -53,7 +53,7 @@
       >
         <!-- fetch slide with v-for  -->
         <Slide v-for="item in company" :key="slide">
-          <NuxtImg class="max-w-36" :src="item" alt="#" />
+          <NuxtImg class="max-w-40" :src="item" alt="#" />
         </Slide>
 
         <!-- Slider navigation -->
