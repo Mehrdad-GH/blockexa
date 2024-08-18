@@ -1,6 +1,9 @@
 <template>
+  <!-- aos motion -->
   <div data-aos="zoom-in">
+    <!-- text & searchBar & picture section -->
     <div class="flex mt-5 justify-between">
+      <!-- Texts section -->
       <div class="flex flex-col gap-10">
         <h1 class="text-6xl font-black">
           اینجا<span class="text-purple-600 font-black"> بلاک اگزاست.</span>
@@ -13,6 +16,8 @@
           بلاکچین <br />
           رو در اختیار شما قرار بدیم .
         </h6>
+
+        <!-- SearchBar section -->
         <div
           class="flex items-center justify-between w-full mx-auto p-2 bg-white rounded-full shadow-md"
         >
@@ -29,23 +34,29 @@
         </div>
       </div>
 
+      <!-- person picture  -->
       <div class="flex bg-[#7F56D980] w-fit rounded-full py-1">
         <NuxtImg class="w-[40vh]" src="/Person.png" />
       </div>
     </div>
 
+    <!-- Company Slider  -->
     <fieldset class="border py-12 mt-4 border-stone-400 rounded-xl">
+      <!-- section title -->
       <legend class="text-left ml-10 px-4 text-lg">شرکت های بلاکچینی</legend>
+      <!-- Slider section -->
       <Carousel
         :="settings"
         :autoplay="20000"
         :wrapAround="true"
         :breakpoints="breakpoints"
       >
+        <!-- fetch slide with v-for  -->
         <Slide v-for="item in company" :key="slide">
           <NuxtImg class="max-w-36" :src="item" alt="#" />
         </Slide>
 
+        <!-- Slider navigation -->
         <template #addons>
           <Navigation />
         </template>
@@ -53,17 +64,19 @@
     </fieldset>
     <!-- shadow overLay -->
     <div
-      class="absolute bg-[#3D5CFF33] translate-y-10 w-80 h-80 top-96 left-32 t blur-2xl rounded-full"
+      class="absolute bg-[#3D5CFF33] w-80 h-80 top-64 left-2 t blur-2xl rounded-full"
     ></div>
   </div>
 </template>
 
 <script setup>
+//Slider props
 const settings = {
   itemsToShow: 3,
   snapAlign: "center",
 };
-
+// Slider responsive breakpoints
+ // //to do:Make breakpoints optimized
 const breakpoints = {
   // 640px and up
   640: {
@@ -81,7 +94,7 @@ const breakpoints = {
     snapAlign: "center",
   },
 };
-
+//company slider picture
 const company = [
   "/Company/HubSpot.png",
   "/Company/Loom.png",
@@ -92,6 +105,7 @@ const company = [
 </script>
 
 <style>
+/* style for slider navigation  */
 .carousel__icon {
   color: white;
 }
