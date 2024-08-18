@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/image", "vue3-carousel-nuxt"],
+  modules: ["@nuxt/ui", "@nuxt/image", "vue3-carousel-nuxt", "nuxt-aos"],
   css :["~/assets/main.css"],
   colorMode: {
     preference: 'light'
