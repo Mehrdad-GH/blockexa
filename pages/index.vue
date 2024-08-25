@@ -1,6 +1,7 @@
 <template>
   <div>
     <MainSection />
+    <PopularCourses />
   </div>
 </template>
 
