@@ -151,6 +151,14 @@
 // Loading state reference (initially true)
 const Loading = ref(true);
 
+// Function to handle tab change
+function onChange(index) {
+  Loading.value = false;
+  setTimeout(() => {
+    Loading.value = true;
+  }, 1000);
+}
+
 // Array of tab titles with labels
 const tabTitle = [
   {
@@ -169,6 +177,9 @@ const tabTitle = [
     label: "وب", // Tab label for Web
   },
 ];
+
+
+
 
 // Array of course objects
 const Courses = [
@@ -225,13 +236,7 @@ const Courses = [
   },
 ];
 
-// Function to handle tab change
-function onChange(index) {
-  Loading.value = false;
-  setTimeout(() => {
-    Loading.value = true;
-  }, 1000);
-}
+
 
 </script>
 

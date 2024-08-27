@@ -1,7 +1,8 @@
 <template>
   <div>
-    <MainSection />
-    <PopularCourses />
+    <LandingMainSection />
+    <LandingPopularCourses />
+    <LandingLearnBlockchain />
   </div>
 </template>
 
