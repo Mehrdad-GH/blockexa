@@ -3,6 +3,7 @@
     <LandingMainSection />
     <LandingPopularCourses />
     <LandingLearnBlockchain />
+    <LandingAbout />
   </div>
 </template>
 
