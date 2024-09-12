@@ -4,6 +4,7 @@
     <LandingPopularCourses />
     <LandingLearnBlockchain />
     <LandingAbout />
+    <LandingComments />
   </div>
 </template>
 
