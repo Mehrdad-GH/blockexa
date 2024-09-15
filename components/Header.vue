@@ -19,7 +19,7 @@
     </ui>
 
     <!-- button overlay -->
-    <NuxtImg class="-mt-3 -translate-y-6" src="/ButtonOverlay.png" />
+    <ShapeButtonOverlay />
 
 
     <!-- Sign in and Sign up Buttons -->
