@@ -15,6 +15,7 @@
     "nuxt": "^3.12.4",
     "nuxt-aos": "^1.2.5",
     "nuxt-swiper": "^1.2.2",
-    "vue": "latest"
+    "vue": "latest",
+    "vue3-carousel-nuxt": "^1.1.2"
   }
 }
