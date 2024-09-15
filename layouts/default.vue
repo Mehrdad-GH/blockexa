@@ -3,6 +3,7 @@
     <Header />
     <slot />
   </div>
+    <Footer />
 </template>
 
 <script setup>
