@@ -3,7 +3,7 @@
 <div class="mt-40">
   
   <!-- Header section with flex layout and spacing -->
-  <div class="flex justify-between mb-10">
+  <div class="flex justify-between mb-10 max-lg:flex-col max-lg:gap-7 max-lg:items-center max-md:items-stretch">
     
     <!-- Main heading -->
     <h1 class="font-extrabold mt-5 text-4xl">
@@ -28,8 +28,8 @@
           tab: {
             active: 'text-white',
             inactive: 'text-white',
-            padding: 'px-5',
-            size: 'text-lg',
+            padding: 'px-5 max-md:px-0',
+            size: 'text-lg max-md:text-sm max-sm:text-xs',
           },
         },
       }"
@@ -43,7 +43,7 @@
     <!-- Loop through Courses array -->
     <div
       v-for="item in Courses"
-      class="bg-[#381D74] shadow-md rounded-3xl flex flex-col w-[31%]  mb-6"
+      class="bg-[#381D74] shadow-md rounded-3xl flex flex-col w-[31%] mb-6 max-lg:w-[48%] max-md:w-full"
     >
       <!-- Conditional rendering: Show image or skeleton loader -->
       <NuxtImg

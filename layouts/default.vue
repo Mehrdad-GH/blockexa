@@ -1,5 +1,5 @@
 <template>
-  <div class="px-28">
+  <div class="lg:px-28">
     <Header />
     <slot />
   </div>

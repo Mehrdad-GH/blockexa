@@ -2,13 +2,13 @@
   <!-- aos motion -->
   <div data-aos="zoom-in">
     <!-- text & searchBar & picture section -->
-    <div class="flex mt-5 justify-between">
+    <div class="flex mt-5 justify-between max-md:hidden">
       <!-- Texts section -->
       <div class="flex flex-col gap-10">
-        <h1 class="text-6xl font-black">
+        <h1 class="text-6xl font-black lg:max-xl:text-5xl ">
           اینجا<span class="text-purple-600 font-black"> بلاک اگزاست.</span>
         </h1>
-        <h2 class="text-4xl font-bold">
+        <h2 class="text-2xl font-bold ">
           بهترین منبع آموزش برنامه نویسی بلاکچین .
         </h2>
         <h6 class="text-gray-400">
@@ -19,12 +19,12 @@
 
         <!-- SearchBar section -->
         <div
-          class="flex items-center justify-between w-full mx-auto p-2 bg-white rounded-full shadow-md"
+          class="flex items-center justify-between w-full mx-auto p-2 bg-white rounded-full shadow-md lg:max-xl:w-3/4"
         >
           <input
             type="text"
             placeholder="چی می‌خواهی یاد بگیری؟ اینجا سرچ کن"
-            class="flex-grow text-gray-500 py-2 px-4 rounded-full focus:outline-none"
+            class="flex-grow text-gray-500 py-2 px-4 rounded-full focus:outline-none lg:max-xl:text-sm"
           />
           <button
             class="bg-purple-500 text-white px-6 py-2 rounded-full font-medium ml-2"
@@ -36,9 +36,66 @@
 
       <!-- person picture  -->
       <div class="flex bg-[#7F56D980] w-fit rounded-full py-1">
-        <NuxtImg class="w-[40vh]" src="/Person.png" />
+        <NuxtImg class="w-72 lg:max-xl:w-64" src="/Person.png" />
       </div>
     </div>
+ 
+<!-- responsive text section -->
+    <div class="hidden mt-5 items-center max-md:flex max-md:flex-col">
+      <!-- Texts section -->
+      <div class="flex flex-col gap-10 items-center">
+        <h1 class="text-5xl font-black text-center">
+          اینجا<span class="text-purple-600 font-black"> بلاک اگزاست.</span>
+        </h1>
+        <h2 class="text-xl font-bold ">
+          بهترین منبع آموزش برنامه نویسی بلاکچین .
+        </h2>
+        <h6 class="text-gray-400">
+          ما توی بلاک اگزا می خوایم که بهترین آموزش های تکنولوژی آینده ، یعنی
+          بلاکچین 
+          رو در اختیار شما قرار بدیم .
+        </h6>
+
+        <!-- person picture  -->
+      <div class="flex bg-[#7F56D980] w-fit rounded-full py-1">
+        <NuxtImg class="w-72 lg:max-xl:w-64" src="/Person.png" />
+      </div>
+
+        <!-- SearchBar section -->
+        <div
+          class="flex items-center justify-between w-full mx-auto p-2 bg-white rounded-full shadow-md lg:max-xl:w-3/4"
+        >
+          <input
+            type="text"
+            placeholder="چی می‌خواهی یاد بگیری؟ اینجا سرچ کن"
+            class="flex-grow text-gray-500 py-2 px-4 rounded-full focus:outline-none lg:max-xl:text-sm"
+          />
+          <button
+            class="bg-purple-500 text-white px-6 py-2 rounded-full font-medium ml-2"
+          >
+            بزن بریم!
+          </button>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Company Slider  -->
     <fieldset class="border py-8 mt-4 border-stone-400 rounded-xl">
@@ -53,7 +110,7 @@
       >
         <!-- fetch slide with v-for  -->
         <Slide v-for="item in company" :key="slide">
-          <NuxtImg class="max-w-40" :src="item" alt="#" />
+          <NuxtImg class="min-w-32 max-w-40 lg:max-xl:w-10" :src="item" alt="#" />
         </Slide>
 
         <!-- Slider navigation -->
@@ -79,9 +136,14 @@ const settings = {
  // //to do:Make breakpoints optimized
 const breakpoints = {
   // 640px and up
-  640: {
-    itemsToShow: 3,
+  100: {
+    itemsToShow: 1,
     snapAlign: "center",
+  },
+  
+  640: {
+    itemsToShow: 2,
+    snapAlign: "right",
   },
   // 768px and up
   768: {

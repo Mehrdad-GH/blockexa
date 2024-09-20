@@ -1,10 +1,10 @@
 <template>
   <div class="mt-40 ">
-    <div class="flex items-center ml-14">
-      <h1 class="self-center flex-grow text-center text-5xl font-bold mt-10">
-        <span class="text-[#7F56D9] font-bold">نظرات</span> رو بررسی کنیم
+    <div class="flex items-center ml-14 max-md:mb-10">
+      <h1 class="self-center flex-grow text-center text-5xl font-bold mt-10 max-md:text-right max-md:z-10">
+        <span class="text-[#7F56D9] font-bold ">نظرات</span> رو بررسی کنیم
       </h1>
-      <div class="grid grid-cols-10 gap-4 ml-auto">
+      <div class="grid grid-cols-10 gap-4 ml-auto max-md:absolute max-md:left-0 max-md:z-0">
         <div
           v-for="dot in 100"
           :key="dot"
@@ -13,12 +13,12 @@
       </div>
     </div>
 
-    <div class="flex gap-32 mt-5 justify-between">
-      <div class="w-1/3">
-        <div class="flex items-center justify-center h-full">
+    <div class="flex mt-5 justify-around max-lg:flex-col max-lg:items-center">
+      <div class="w-1/3 max-lg:w-full">
+        <div class="flex items-center justify-center h-full max-lg:justify-evenly">
           <!-- Top images -->
           <div
-            class="flex flex-col justify-between items-center w-fit h-full max-w-lg"
+            class="flex flex-col justify-between items-center w-fit h-full max-w-lg max-lg:flex-row"
           >
             <div class="w-12 h-12 rounded-full overflow-hidden shadow-lg">
               <img
@@ -29,7 +29,7 @@
             </div>
 
             <div
-              class="w-14 h-14 -translate-x-24 rounded-full overflow-hidden shadow-lg"
+              class="w-14 h-14 -translate-x-24 rounded-full overflow-hidden shadow-lg max-sm:hidden"
             >
               <img
                 src="https://picsum.photos/120/120"
@@ -41,7 +41,7 @@
 
           <!-- Center image -->
           <div
-            class="w-28 h-28 m-8 rounded-full overflow-hidden shadow-lg mb-6"
+            class="w-28 h-28 m-8 rounded-full overflow-hidden shadow-lg mb-6 lg:max-xl:h-16 max-lg:mr-28 max-md:-mr-12 max-md:h-14 max-md:w-14 max-sm:mr-4"
           >
             <img
               src="https://picsum.photos/200/200"
@@ -52,7 +52,7 @@
 
           <!-- Bottom images -->
           <div
-            class="flex flex-col justify-between items-center w-fit h-full max-w-lg"
+            class="flex flex-co justify-between w-fit h-full max-w-lg max-lg:flex-row max-lg:gap-10 max-md:gap-3"
           >
             <div class="w-24 h-24 rounded-full overflow-hidden shadow-lg">
               <img
@@ -72,27 +72,27 @@
       </div>
 
       <!-- Comments slider -->
-      <div class="w-3/5">
+      <div class="w-3/5 max-lg:w-full max-lg:px-10 max-md:px-3">
         <div class="flex items-center justify-end">
           <Swiper
             ref="swiperRef"
             class="w-full"
-            :modules="[SwiperAutoplay, SwiperEffectCards]"
+            :modules="[SwiperAutoplay, SwiperEffectFlip]"
             :slides-per-view="1"
-            :effect="'cards'"
+            :effect="'flip'"
             :autoplay="{
               delay: 8000,
               disableOnInteraction: true,
             }"
             :cards-effect="{
               slideShadows: true,
-              slideOffset: 10,
+              slideOffset: 1000,
             }"
             @swiper="onSwiper"
           >
             <SwiperSlide v-for="item in comment" class="w-10">
               <div
-                class="flex flex-col w-full gap-12 p-4 bg-purple-900 rounded-xl shadow-lg"
+                class="flex flex-col w-full gap-10 p-4 bg-purple-900 rounded-xl shadow-lg"
               >
                 <div class="flex items-center justify-start text-right">
                   <div class="flex gap-5">

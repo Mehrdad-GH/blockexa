@@ -1,10 +1,10 @@
 <template>
-  <div class="">
+  <div class="relative">
     <!-- Marker Box Component -->
     <ShapeMarkerBox class="mt-28" />
     <!-- Shadow Overlay -->
     <div
-      class="absolute bg-[#3D5CFF33] w-96 h-96 mb-10 right-0 translate-x-28 -translate-y-18 blur-2xl rounded-full"
+      class="absolute bg-[#3D5CFF33] w-96 h-96 mb-10 right-0 translate-x-64 -translate-y-20 blur-2xl rounded-full"
     ></div>
     <!-- Bubble Shape Component -->
     <ShapeBubbleShape />
@@ -20,12 +20,12 @@
     </div>
 
     <!-- Blockchain Items -->
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap overflow-hidden">
       <!-- Loop through BlockchainItem -->
-      <div v-for="item in BlockchainItem" class="lg:w-1/4">
+      <div v-for="item in BlockchainItem" class="lg:w-1/4 w-full sm:w-1/2 p-2">
         <!-- Card -->
         <div
-          class="flex justify-between items-center px-10 py-5 my-10 mx-5 rounded-lg duration-300 bg-[#524870] hover:bg-purple-800"
+          class="flex justify-between items-center px-10 py-5 rounded-lg duration-300 bg-[#524870] hover:bg-purple-800"
         >
           <h1 class="font-light">{{ item.name }}</h1>
           <!-- Icon -->
@@ -37,7 +37,6 @@
 </template>
 
 <script setup>
-// Blockchain benefits array
 const BlockchainItem = [
   { name: "پرسرعت و بدون اتلاف زمان", Icon: "gravity-ui:picture" },
   { name: "تکنولوژی آینده", Icon: "majesticons:scroll-text-line" },
@@ -49,3 +48,7 @@ const BlockchainItem = [
   { name: "ذخیره داده های بزرگ", Icon: "material-symbols:database-outline" },
 ];
 </script>
+
+<style>
+
+</style>
